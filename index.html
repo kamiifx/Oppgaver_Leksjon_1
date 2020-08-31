@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HIOF ToDo</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+
+<body>
+
+<div class="grid">
+    <header>
+        <nav>
+            <h1 class="title"><a href="index.html">HIOF</a></h1>
+        </nav>
+    </header>
+
+    <div class="mainModal">
+        <div class="modalTodo">
+            <div id="header">
+                <h3>New Todo</h3>
+                <span class="closBtn">&times;</span>
+            </div>
+            <form>
+                <p>Title</p>
+                <input type="text" name="title" placeholder="Todo Title" id="titleModal">
+
+                <p>Description</p>
+                <input type="text" name="desc" placeholder="Write a description" id="descModal">
+
+                <p>Author</p>
+                <input type="text" name="auth" placeholder="Who is the author ?" id="authModal">
+
+                <input type="button" value="Create" class="create">
+            </form>
+            <div class="background"></div>
+        </div>
+    </div>
+    
+    <main>
+        <button class="todoButton"> + Todo</button>
+        <div class="cards">
+        </div>
+
+
+        <div class="completedTodos">
+            <div class="compHead">
+                <h3>Title</h3>
+                <h3>Description</h3>
+                <h3>Author</h3>
+                <h3>Date</h3>
+            </div>
+            <div class="TodosInfo">
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
