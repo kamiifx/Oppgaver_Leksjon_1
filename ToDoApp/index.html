@@ -25,8 +25,12 @@
                 <p>Title</p>
                 <input type="text" name="title" placeholder="Todo Title" id="titleModal">
 
-                <p>Description</p>
-                <input type="text" name="desc" placeholder="Write a description" id="descModal">
+                <div class="charLeft">
+                    <p>Description</p>
+                    <p>Characters Left</p>
+                    <p id="charsLeft"></p>
+                </div>
+                <input type="text" maxlength="30" name="desc" placeholder="Write a description" id="descModal">
 
                 <p>Author</p>
                 <input type="text" name="auth" placeholder="Who is the author ?" id="authModal">
@@ -42,8 +46,12 @@
         <div class="cards">
         </div>
 
-
         <div class="completedTodos">
+            <h2>Completed Todos</h2>
+            <div class="date">
+                <p>Filter by date</p>
+                <input id="checkDate" onclick="sortDate()" type="checkbox">
+            </div>
             <div class="compHead">
                 <h3>Title</h3>
                 <h3>Description</h3>
