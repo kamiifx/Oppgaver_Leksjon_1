@@ -19,55 +19,62 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5c835e7-f4bf-412d-9e81-c2d6326a8441" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../JsCardio/.idea/JsCardio.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JsCardio/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JsCardio/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JsCardio/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JsCardio/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e7e28146-913b-48b0-8114-53ec0959f9a3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1h3Fe1OUj4VToWeWCxuQpDePZmc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1h3Fo51Xagzr5bWAkZrK9VKqkF2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JsCardio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:52147/ToDoApp/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:52147/JsCardio/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="script.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/script.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.script.js" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5c835e7-f4bf-412d-9e81-c2d6326a8441" name="Default Changelist" comment="" />
-      <created>1599231960609</created>
+      <changelist id="e7e28146-913b-48b0-8114-53ec0959f9a3" name="Default Changelist" comment="" />
+      <created>1599232040294</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1599231960609</updated>
-      <workItem from="1599231961790" duration="58000" />
-      <workItem from="1599232426082" duration="1313000" />
+      <updated>1599232040294</updated>
+      <workItem from="1599232041396" duration="8917000" />
     </task>
     <servers />
   </component>
@@ -84,12 +91,23 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1599232038946">
+    <state width="2539" height="101" key="GridCell.Tab.0.bottom" timestamp="1599241855227">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1060" y="455" key="FileChooserDialogImpl/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1599232038946" />
+    <state width="2539" height="101" key="GridCell.Tab.0.bottom/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1599241855227" />
+    <state width="2539" height="101" key="GridCell.Tab.0.center" timestamp="1599241855226">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="101" key="GridCell.Tab.0.center/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1599241855226" />
+    <state width="2539" height="101" key="GridCell.Tab.0.left" timestamp="1599241855226">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="101" key="GridCell.Tab.0.left/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1599241855226" />
+    <state width="2539" height="101" key="GridCell.Tab.0.right" timestamp="1599241855227">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2539" height="101" key="GridCell.Tab.0.right/-2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1599241855227" />
   </component>
 </project>
