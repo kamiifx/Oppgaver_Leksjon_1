@@ -43,20 +43,20 @@
         div.innerHTML ="<h3>" + title.charAt(0).toUpperCase() + title.slice(1) + "</h3>" +
             "<p>" + desc.charAt(0).toUpperCase() +  desc.slice(1) + "</p>"  +
             "<p>"+ auth.charAt(0).toUpperCase() + auth.slice(1) +  "</p>" +
-            '<input type="button" class="removeC" onclick="removeCard(this)" value="Remove">' +
-            "<input type='button' class='completeC' onclick='completeCard(this)' value='Complete'>";
+            '<input type="button" class="removeC" onclick="cardsModule.removeCard(this)" value="Remove">' +
+            "<input type='button' class='completeC' onclick='cardsModule.completeCard(this)' value='Complete'>";
 
         document.querySelector('.cards').appendChild(div);
         modal.style.display = "none";
 
     }
 
-    function removeCard(input){                                                                 //Tar vekk Cards
+    module.exports.removeCard = function removeCard(input){                                                                 //Tar vekk Cards
         document.querySelector('.cards').removeChild(input.parentNode);                 //Referer til seg selv (selve cardet)
         allowedDivs ++
     }
 
-    function completeCard(input){                                                               //Henter informasjon fra card til Completed List
+    module.exports.completeCard = function completeCard(input){                                                               //Henter informasjon fra card til Completed List
         const title = input.parentNode.firstChild.textContent;
         const desc = input.parentNode.firstChild.nextSibling.textContent;
         const author = input.parentNode.firstChild.nextSibling.nextSibling.textContent;
@@ -81,4 +81,5 @@
         const checkBox = document.getElementById('checkDate');
         //Fikk litt lite tid her, måtte fikse de andre innleveringene også :/
     }
+
 
