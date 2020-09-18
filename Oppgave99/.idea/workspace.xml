@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8b01120e-ee96-4a6e-98fe-9208cc7e1800" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1hYabkawFj3bSV3qTsoB8AjA2N5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.10.1" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.10.1" />
+    <property name="last_opened_file_path" value="/snap/node/current/bin/node" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="/snap/node/current/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8b01120e-ee96-4a6e-98fe-9208cc7e1800" name="Default Changelist" comment="" />
+      <created>1600190555676</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600190555676</updated>
+      <workItem from="1600190557606" duration="840000" />
+      <workItem from="1600191427399" duration="21645000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="417" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600191921703">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="417" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600191921703" />
+    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600191321012">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600191321012" />
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom" timestamp="1600250758619">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1600250758619" />
+    <state width="1897" height="275" key="GridCell.Tab.0.center" timestamp="1600250758618">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="275" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1600250758618" />
+    <state width="1897" height="275" key="GridCell.Tab.0.left" timestamp="1600250758618">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="275" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1600250758618" />
+    <state width="1897" height="275" key="GridCell.Tab.0.right" timestamp="1600250758618">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="275" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1600250758618" />
+    <state x="463" y="188" width="994" height="737" key="SettingsEditor" timestamp="1600192775114">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="463" y="188" width="994" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1600192775114" />
+    <state x="679" y="363" width="552" height="386" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600191322914">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="679" y="363" width="552" height="386" key="jetbrains.nodejs.interpreters-dialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600191322914" />
+    <state x="624" y="252" key="run.anything.popup" timestamp="1600224998761">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1600224998761" />
+  </component>
+</project>
