@@ -303,7 +303,7 @@ try {
 		// - Do NOT use Object.assign()
 		// - Do use object spread properties
 		// - Think about the order!
-		let result = {obj1,obj2,obj3};
+		let result = {...obj1,...obj3,...obj2};
 
 		// Don't make changes below this line	
 		
@@ -320,12 +320,11 @@ try {
 
   /// Method definitions (bonus) ///
 
-  /*
 	(function UseMethodDefinitions() {
 		// Use method properties to remove unnecessary syntax. DO NOT use arrow functions.
 		let obj = {
-			add: function (a, b) { return a + b; },
-			subtract: function (a, b) { return a - b; }
+			add(a, b) { return a + b; },
+			subtract(a, b) { return a - b; }
 		}
 
 		// Don't make changes below this line	
@@ -335,14 +334,19 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
 
   /// class (bonus) ///
 
-  /*
 	(function UseClass() {
 		// Let Multiplier be a class with the appropriate methods to succeed.
-		let Multiplier = 'class';
+		class Multiplier{
+			constructor(baseNumber) {
+				this.baseNumber = baseNumber;
+			}
+			multiply(x){
+				return this.baseNumber * x;
+			}
+		}
 
 		// Don't make changes below this line	
 		
@@ -352,7 +356,6 @@ try {
 		
 		solvedBonus++;
 	})();
-	*/
 
   /// Template strings (bonus) ///
 
