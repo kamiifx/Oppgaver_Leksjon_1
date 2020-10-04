@@ -1,6 +1,6 @@
 import React from "react";
-import style from "../scss/Title.module.scss"
-import styled, {css} from 'styled-components'
+import style from "../scss/NavBar.module.scss"
+import styled from 'styled-components'
 
 function NavBar(props){
 

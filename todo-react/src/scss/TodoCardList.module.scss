@@ -1,5 +1,5 @@
-.wrapper{
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-columns: 20;
+.todoCard{
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
 }
