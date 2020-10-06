@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import style from "../scss/Modal.module.scss"
 import createUID from "create-unique-id"
 import {useForm} from "react-hook-form";
 import {motion} from "framer-motion";
+
 
 function Modal({modalOn, setModalOn,tittleText, setTitleText,descText,setDescText,authText,setAuthText, addTodo,setAddToDo}){
     const titleHandler = (e) =>{setTitleText(e.target.value)}
     const desciptHandler = (e) =>{setDescText(e.target.value)}
     const authHandler = (e) =>{setAuthText(e.target.value)}
     const closeModal = () =>{setModalOn(false)}
+    const [charsLeft, setCharsLeft] = useState(50);
     const {register,handleSubmit,errors} = useForm();
     const modalFormHandler = (e) =>{
         //e.preventDefault()
@@ -17,6 +19,11 @@ function Modal({modalOn, setModalOn,tittleText, setTitleText,descText,setDescTex
         setDescText("")
         setTitleText("")
         closeModal()
+    }
+    const keyHandler = (e) =>{
+        const textField = e.target.getAttribute("maxLength")
+        const textLength = e.target.value.length;
+        setCharsLeft(textField - textLength)
     }
 
     const variants = {
@@ -33,10 +40,11 @@ function Modal({modalOn, setModalOn,tittleText, setTitleText,descText,setDescTex
                     </div>
                     <p>Title</p>
                     {errors.title && <p>Every tasks need a title</p>}
-                    <input value={tittleText} onChange={titleHandler} name={"title"} type="text" placeholder={"Tittel"} ref={register({required:true})}/>
+                    <input value={tittleText}  onChange={titleHandler} name={"title"} type="text" placeholder={"Tittel"} ref={register({required:true})}/>
                     <p>Description</p>
+                    <p>characters left ({charsLeft})</p>
                     {errors.description && <p>Every task need a description</p>}
-                    <input value={descText} onChange={desciptHandler} name={"description"}  type="text" placeholder={"Description"} ref={register({required:true})}/>
+                    <input value={descText} maxLength={50} onKeyUp={keyHandler} onChange={desciptHandler} name={"description"}  type="text" placeholder={"Description"} ref={register({required:true})}/>
                     <p>Author</p>
                     <input value={authText} onChange={authHandler} name={"author"}  type="text" placeholder={"Author"} ref={register}/>
                     <button type={"submit"}>Create</button>

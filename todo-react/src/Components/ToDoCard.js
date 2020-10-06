@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Title from "./Title";
 import style from "../scss/ToDoCard.module.scss"
 import {motion} from "framer-motion";
@@ -7,16 +7,20 @@ import {motion} from "framer-motion";
 
 function ToDoCard({title,desc,auth,todo,addTodo,setTodo,completeTodo,setCompleteTodo}){
     const datenow = new Date().toLocaleDateString();
+    const [opac, setOpacity] = useState(2)
     const deleteHandler = () =>{
-        const removeTodo = addTodo.filter((item) => item.id !== todo.id)
-        setTodo(removeTodo)
+        setOpacity(0)
+        setTimeout(()=>{ const removeTodo = addTodo.filter((item) => item.id !== todo.id)
+            setTodo(removeTodo)},400)
     }
     const completeHandler = () => {
+        setOpacity(0)
+        setTimeout(()=>{
         setCompleteTodo([...completeTodo,{title:todo.title,description:todo.description, author:todo.author, date: datenow ,id: todo.id}])
-        deleteHandler()
+        deleteHandler()},400)
     }
     return(
-        <motion.div animate={{scale:[0,1.2,1]}} transition={{duration:0.3}} className={style.cards}>
+        <motion.div animate={{scale:[0,1.2,1],opacity:opac}} transition={{duration:0.3}} className={style.cards}>
             <div className={style.wrapper}>
                 <Title title={title}/>
                 <p>

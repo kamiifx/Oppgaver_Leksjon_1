@@ -5,7 +5,7 @@ import style from "../scss/CompletedList.module.scss"
 function CompletedList({completeTodo, addTodo}){
 
     return (
-        <div className={style.completedTodos}>
+        <div style={{position:addTodo.length>0?"sticky":"absolute",marginTop:addTodo.length>0?"75px":"20px"}} className={style.completedTodos}>
             {addTodo.length === 0 && <h3 className={style.noTodo}> Jippi! Ingen todos i dag &#127881;</h3>}
             <h2>Completed todos</h2>
             <div className={style.info}>
