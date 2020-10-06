@@ -19,6 +19,8 @@ Or run :
 $ yarn start
 ```
 
+Fully built app also here : | React Todo | [https://todoreactdeploy.herokuapp.com/][PlDb] |
+
 > The static files sometimes run better than running the app.
 > Some functionality like search box works better, but
 > If you are running the app and search dont work, try to
