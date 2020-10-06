@@ -2,37 +2,47 @@ import React from "react";
 import style from "../scss/Modal.module.scss"
 import createUID from "create-unique-id"
 import {useForm} from "react-hook-form";
+import {motion} from "framer-motion";
 
 function Modal({modalOn, setModalOn,tittleText, setTitleText,descText,setDescText,authText,setAuthText, addTodo,setAddToDo}){
     const titleHandler = (e) =>{setTitleText(e.target.value)}
     const desciptHandler = (e) =>{setDescText(e.target.value)}
     const authHandler = (e) =>{setAuthText(e.target.value)}
     const closeModal = () =>{setModalOn(false)}
+    const {register,handleSubmit,errors} = useForm();
     const modalFormHandler = (e) =>{
-        e.preventDefault()
+        //e.preventDefault()
         setAddToDo([...addTodo,{title: tittleText, description:descText, author:authText, id: createUID(4) }])
         setAuthText("")
         setDescText("")
         setTitleText("")
+        closeModal()
+    }
+
+    const variants = {
+        open: { opacity:1.2},
+        closed: { opacity:0}
     }
     return(
-        <div style={{display:modalOn?"block":"none"}} className={style.backgroundModal}>
+        <motion.div animate={modalOn?"open":"closed"} variants={variants}  style={{display:modalOn?"block":"none"}} className={style.backgroundModal}>
             <div className={style.mainModal}>
-                <form action="" onSubmit={modalFormHandler}>
+                <form action="" onSubmit={handleSubmit(modalFormHandler)}>
                     <div className={style.headerModal}>
                         <h3>New Todo</h3>
                         <span onClick={() => setModalOn(false)}>&#10799;</span>
                     </div>
                     <p>Title</p>
-                    <input value={tittleText} onChange={titleHandler} name={"title"} type="text" placeholder={"Tittel"}/>
+                    {errors.title && <p>Every tasks need a title</p>}
+                    <input value={tittleText} onChange={titleHandler} name={"title"} type="text" placeholder={"Tittel"} ref={register({required:true})}/>
                     <p>Description</p>
-                    <input value={descText} onChange={desciptHandler} name={"description"}  type="text" placeholder={"Description"}/>
+                    {errors.description && <p>Every task need a description</p>}
+                    <input value={descText} onChange={desciptHandler} name={"description"}  type="text" placeholder={"Description"} ref={register({required:true})}/>
                     <p>Author</p>
-                    <input value={authText} onChange={authHandler} name={"author"}  type="text" placeholder={"Author"}/>
-                    <button type={"submit"} onClick={closeModal}>Create</button>
+                    <input value={authText} onChange={authHandler} name={"author"}  type="text" placeholder={"Author"} ref={register}/>
+                    <button type={"submit"}>Create</button>
                 </form>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

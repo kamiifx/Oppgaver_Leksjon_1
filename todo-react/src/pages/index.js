@@ -2,11 +2,12 @@ import React, {useState} from "react";
 import TodoCardList from "../Components/TodoCardList";
 import Modal from "../Components/Modal";
 import ToDoButton from "../Components/ToDoButton";
+import CompletedList from "../Components/CompletedList";
 
 function IndexPage(){
     const [toggleModal, setToggleModal] = useState(false)
     const [addTodo, setAddTodo] = useState([])
-
+    const [completedTodo, setCompletedTodo] = useState([])
     const [titleText, setTitleText] = useState("")
     const [descText, setDescText] = useState("")
     const [authText, setAuthText] = useState("")
@@ -19,7 +20,9 @@ function IndexPage(){
                   authText={authText} setAuthText={setAuthText}
                   addTodo={addTodo} setAddToDo={setAddTodo}/>
            <ToDoButton setToggleModal={setToggleModal}/>
-           <TodoCardList addTodo={addTodo}/>
+           <TodoCardList setCompleteTodo={setCompletedTodo} completeTodo={completedTodo}
+                         setTodo={setAddTodo} addTodo={addTodo}/>
+           <CompletedList addTodo={addTodo} completeTodo={completedTodo}/>
        </main>
     )
 }

@@ -1,0 +1,18 @@
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;;
+  border-bottom: solid 1px #bcbcbc;
+
+}
+
+.items p{
+  color: #BDBDBD;
+  margin-left: 10px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,41 @@
+.info{
+  display: flex;
+  flex-direction: row;
+  width: 54em;
+  height: 2em;
+  background-color: #E6E6E6;
+  align-items: center;
+  gap: 174px;
+}
+
+.info h3{
+  color: #393939;
+  margin-left: 30px;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.completedTodos{
+  position: absolute;
+  margin-top: 20px;
+  top: 500px;
+  margin-left: 33%;
+}
+
+.todoItems{
+  width: 54em;
+  margin:0;
+  padding: 0;
+}
+
+.noTodo{
+  position: absolute;
+  margin-left: 35%;
+  top: -180px;
+  animation: color-change 2s infinite;
+}
+@keyframes color-change {
+  0% { color: #78e08f; }
+  50% { color: #6a89cc; }
+  100% { color: #fa983a; }
+}
