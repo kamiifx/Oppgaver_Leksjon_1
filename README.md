@@ -1,5 +1,8 @@
 # Todo - React App
 
+- Fully built app also here : https://todoreactdeploy.herokuapp.com/
+
+
 ### Installation
 (In the todo-react folder)
 - Install packages (Node Modules)
@@ -18,8 +21,6 @@ Or run :
 
 $ yarn start
 ```
-
-Fully built app also here : https://todoreactdeploy.herokuapp.com/
 
 > The static files sometimes run better than running the app.
 > Some functionality like search box works better, but
