@@ -24,12 +24,7 @@ function SearchBar({addTodo,completeTodo}){
     }
 
     const searchHandler = (e) =>{
-        if (e.target.value.length>0){
-            setSearchOn(true)
-
-        }else {
-            setSearchOn(false)
-        }
+        setSearchOn(e.target.value.length>0)
         setSearchText(e.target.value)
     }
 

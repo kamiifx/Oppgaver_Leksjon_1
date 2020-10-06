@@ -29,7 +29,7 @@ function ToDoCard({title,desc,auth,todo,addTodo,setTodo,completeTodo,setComplete
                 <p>
                     {auth}
                 </p>
-                <div className={style.buttons}>
+                <div style={{marginTop:desc.length>=42?"5px":"25px"}} className={style.buttons}>
                     <button onClick={completeHandler} className={style.completeC}>Complete</button>
                     <button onClick={deleteHandler} className={style.removeC}>Delete</button>
                 </div>

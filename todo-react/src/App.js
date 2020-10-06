@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Switch,
+    Switch,                             //Testing av router, har det bare her så jeg kan gå tilbake til det.
     Route,
 } from "react-router-dom";
 import IndexPage from "./pages";
@@ -14,7 +14,7 @@ function App() {
         <NavBar name={"User user"}/>
           <Router>
               <Switch>
-                  <Route exact path="/">
+                  <Route>
                       <IndexPage />
                   </Route>
               </Switch>
