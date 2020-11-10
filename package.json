@@ -1,14 +1,31 @@
 {
-  "name": "WebApplikasjoner",
+  "name": "Leksjon_11",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:kamiifx/WebApplikasjoner.git",
   "author": "Kamii Akbari <kamiiuedev@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "15.1.0",
+    "yarn": "1.22.5"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+  },
+  "type": "module",
   "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "mongoose": "^5.10.13",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "random-key": "^0.3.2",
+    "slugify": "^1.4.6"
   }
 }
