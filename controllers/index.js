@@ -1,1 +1,5 @@
-export * as userController from '/controllers/user.js';
+const userController = require('../controllers/user.js');
+
+module.exports = {
+    userController,
+}

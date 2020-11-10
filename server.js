@@ -1,17 +1,15 @@
-import express from 'express';
-import userRoutes from './routes/user.js'
-import connectDatabase from "./config/db.js";
-
+const express = require('express');
+const userRoutes = require('./routes/user.js');
+const morgan = require('morgan');
+const connectDatabase = require("./config/db.js")
 
 const app = express();
+app.use(express.json());
 
+app.use(morgan('dev'));
 
 
 app.use("/",userRoutes);
-
-
-
-
 
 
 

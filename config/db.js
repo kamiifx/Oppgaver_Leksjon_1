@@ -1,6 +1,4 @@
-import mongoose from 'mongoose';
-//mongodb+srv://web:web123@cluster0.jkj1x.mongodb.net/Leksjon11DB?retryWrites=true&w=majority
-
+const mongoose = require('mongoose');
 
 
 const connectDatabase = async () => {
@@ -13,4 +11,4 @@ const connectDatabase = async () => {
     console.log(`Connected to mongoDB: ${dbConnect.connection.host}`)
 };
 
-export default connectDatabase;
+module.exports = connectDatabase;
