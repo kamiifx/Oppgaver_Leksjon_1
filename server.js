@@ -1,5 +1,6 @@
 const express = require('express');
 const userRoutes = require('./routes/user.js');
+const pollRoutes = require('./routes/poll.js');
 const errorMiddleware = require('./middleware/errors.js')
 const morgan = require('morgan');
 const connectDatabase = require("./config/db.js")
@@ -9,8 +10,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(errorMiddleware)
 
-app.use("/",userRoutes);
-
+app.use("/api/users/",userRoutes);
+app.use("/api/polls/",pollRoutes);
 
 
 connectDatabase();

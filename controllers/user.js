@@ -1,6 +1,7 @@
 const {userService} = require('../services/index.js')
 const mongoose = require('mongoose')
 require('../models/user.js')
+const ErrorHandler = require('../utils/errorHandler.js')
 const catchAsyncErrors = require('../middleware/catchAsync.js')
 const Users = mongoose.model('users');
 
@@ -13,7 +14,7 @@ const list = catchAsyncErrors(async (req,res,next)=> {
 const get = catchAsyncErrors(async (req,res,next) => {
     const user = await userService.getUserById(req.params.id)
     if (!user){
-        res.status(404).json({error:"Not found"})
+        return next(new ErrorHandler(`Finner ikke denne brukeren med : ${req.params.id}`,404));
     }
     return res.status(200).json(user);
 });
@@ -27,14 +28,18 @@ const create = catchAsyncErrors(async (req,res,next) => {
     }
 });
 
-const update = catchAsyncErrors(async (req,res,next) => {
+const listEvents = catchAsyncErrors(async (req,res,next) => {
+    const {id} = req.params;
+    const poll = await userService.listAllUserPolls(id)
+    res.status(200).json(poll);
+})
 
-});
 const remove = catchAsyncErrors(async (req,res,next) => {
 
 });
 
 
+
 module.exports = {
-     list, get, create, update, remove
+     list, get, create, remove, listEvents
 };

@@ -23,6 +23,7 @@
     "mongoose": "^5.10.13",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
-    "random-key": "^0.3.2"
+    "random-key": "^0.3.2",
+    "validator": "^13.1.17"
   }
 }
