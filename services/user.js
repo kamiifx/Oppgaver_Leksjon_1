@@ -18,12 +18,13 @@ const listAllUserPolls = async (id) => {
 
 const createUser = async (data) => Users.create(data);
 
-
+const getUserByEmail = async (email) =>{return Users.findOne(email)}
 
 
 module.exports = {
     getUserById,
     listAllUsers,
     createUser,
-    listAllUserPolls
+    listAllUserPolls,
+    getUserByEmail
 };
