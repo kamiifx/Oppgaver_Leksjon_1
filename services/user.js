@@ -26,5 +26,6 @@ module.exports = {
     listAllUsers,
     createUser,
     listAllUserPolls,
-    getUserByEmail
+    getUserByEmail,
+
 };

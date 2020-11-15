@@ -22,7 +22,7 @@ const get = catchAsyncErrors(async (req,res,next) => {
 const create = catchAsyncErrors(async (req,res,next) => {
     try {
         const user = await userService.createUser(req.body);
-        return res.status(201).json(user);
+        return res.status(201).json({success:true, data:user});
     }catch (error){
         return res.status(400).json({error:"Error in creating"})
     }

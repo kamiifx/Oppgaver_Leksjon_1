@@ -1,6 +1,16 @@
 import http from "./http";
 
 
+const API_URL = '/users';
+
+
+export const createUser = async (cred) => {
+    try {
+        return await http.post(`${API_URL}`, cred)
+    }catch (err){
+        return err.response.data;
+    }
+};
 
 
 export const getUserInfo = async () => {

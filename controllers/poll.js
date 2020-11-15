@@ -24,7 +24,7 @@ const create = catchAsyncErrors(async (req,res,next) => {
     try {
         req.body.user = req.user.id;
         const poll = await pollService.createPoll(req.body);
-        return res.status(201).json(poll)
+        return res.status(201).json({success:true,data:poll})
     }catch (error){
         return res.status(400).json({error:"Error in creating"})
     }
@@ -39,11 +39,23 @@ const remove = catchAsyncErrors(async (req,res,next) => {
     }
     poll = await pollService.removePoll(req.params.id);
     res.status(204).json({});
-})
+});
+
+const update = catchAsyncErrors(async (req,res,next) => {
+    let poll = await pollService.getPollById(req.params.id)
+    if (!poll){
+        return next(
+            new ErrorHandler(`Finner ikke denne pollen med ${req.params.id}`,404)
+        );
+    }
+    poll = await pollService.update(req.params.id,req.body);
+    res.status(200).json({success:true, data:poll});
+});
 
 module.exports = {
     list,
     get,
     create,
-    remove
+    remove,
+    update
 }

@@ -10,11 +10,19 @@ const removePoll = async (id) => {
     const poll = await Polls.findById(id);
     poll.remove();
 }
+const update = async (id, data) => {
+    Polls.findByIdAndUpdate(id,data,{
+        new:true,
+        runValidator:true,
+        useFindAndModify:false,
+    });
+}
 
 
 module.exports = {
     getPollById,
     listPolls,
     createPoll,
-    removePoll
+    removePoll,
+    update
 }
