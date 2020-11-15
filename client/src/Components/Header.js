@@ -1,10 +1,11 @@
 import React from 'react';
 
+
 function Header(){
 
     return(
         <div>
-            <h1>Header</h1>
+            <button><a href="/login">Login with Email</a></button>
         </div>
     )
 }
