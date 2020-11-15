@@ -2,6 +2,8 @@ const catchAsyncErrors = require('../middleware/catchAsync.js')
 const ErrorHandler = require('../utils/errorHandler.js')
 const token = require('../utils/jwtToken.js')
 const {userService} = require('../services/index.js')
+const jwt = require('jsonwebtoken');
+
 
 const register = catchAsyncErrors(async (req,res,next) => {
 
@@ -37,7 +39,18 @@ const logout = catchAsyncErrors(async (req,res,next) => {
     });
 });
 
+const currentUser =  catchAsyncErrors(async (req,res,next) => {
+    const user = await userService.getUserById(req.user.id);
+    if (!user){
+        return next(new ErrorHandler('Finner ikke brukeren',404))
+    }
+    res.status(200).json({
+        success:true,
+        data:user,
+    });
+})
+
 
 module.exports = {
-    register,login,logout
+    register,login,logout,currentUser
 }

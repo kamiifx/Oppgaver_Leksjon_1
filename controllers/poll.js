@@ -22,6 +22,7 @@ const get = catchAsyncErrors(async (req,res,next) => {
 
 const create = catchAsyncErrors(async (req,res,next) => {
     try {
+        req.body.user = req.user.id;
         const poll = await pollService.createPoll(req.body);
         return res.status(201).json(poll)
     }catch (error){

@@ -13,7 +13,7 @@ const UserSchema = Schema({
 },{timestamps:true, toJSON:{virtuals:true}, toObject:{virtuals: true}});
 
 UserSchema.methods.getJwtToken = function (){
-    return jwt.sign({id: this._id}, 'a3748c5ad8a8cc215d14296edf06ef2b47f7eec7e592910eea0b0b48bdd65820',{expiresIn:'2h'})
+    return jwt.sign({id: this._id}, 'a3748c5ad8a8cc215d14296edf06ef2b47f7eec7e592910eea0b0b48bdd65820',{expiresIn:'200s'})
 }
 
 UserSchema.virtual('polls',{
