@@ -26,7 +26,7 @@ app.use(cors({
 
 
 app.use(morgan('dev'));
-app.use(errorMiddleware)
+    app.use(errorMiddleware)
 
 app.use("/api/users/",userRoutes);
 app.use("/api/polls/",pollRoutes);

@@ -3,7 +3,7 @@ require('../models/poll.js')
 const Polls = mongoose.model('polls');
 
 
-const getPollById = async (id) => Polls.findById(id);
+const getPollById = async (id) => Polls.findById(id).populate('user','email');
 const listPolls = async () => Polls.find().populate('user','email');
 const createPoll = async (data) => Polls.create(data);
 const removePoll = async (id) => {
