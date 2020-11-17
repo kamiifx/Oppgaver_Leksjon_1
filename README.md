@@ -7,6 +7,7 @@ Prosjektet er veldig åpent, mongoDb cloud kjører på 0.0.0.0.0 så burde være
 ### MongoDb link (Kjører på atlas cloud) : "mongodb+srv://web:web123@cluster0.jkj1x.mongodb.net/Leksjon11DB?retryWrites=true&w=majority"
 
 - Man må logge inn for å kunne svare på polls (Bare skrive dummy email på signup eller bruke denne brukern : heisann@gmail.com)
+Samme for å lage en poll selvfølgelig
 
 - Port ligger på bunn av server.js
 
