@@ -24,6 +24,9 @@ function Header(){
                     {!isLoggedIn &&(
                         <Button bg="green.200"><a href="/signup">Sign Up</a></Button>
                     )}
+                    {isLoggedIn && (
+                        <Button bg="blue.200" mr="13px"><a href="/polls/create">Create Event</a></Button>
+                    )}
                     {isLoggedIn &&(
                         <Button bg="red.200" onClick={handleLogout}><a href="/">Logout</a></Button>
                     )}

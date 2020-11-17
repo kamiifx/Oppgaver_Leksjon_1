@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {list} from "../utils/pollService";
 import {useAuthContex} from "../contex/authProvider";
-import { Box,SimpleGrid,Container,Button, Progress } from "@chakra-ui/react"
+import { Box,SimpleGrid,Container,Button, Progress, Flex, Spacer } from "@chakra-ui/react"
 
 function Home(){
     const [polls, setPolls] = useState(null);
@@ -24,9 +24,6 @@ function Home(){
 
     return(
         <div>
-            {isLoggedIn && (
-                <button><a href="/poll/create">Create Event</a></button>
-            )}
                 {polls &&
                 polls.map((polls)=>(
                     <Container mt="50px" maxW="xl" centerContent>
@@ -40,12 +37,25 @@ function Home(){
                                      ml="2" p="3">
                                     <h3>{polls.questionName}</h3>
                                     <Box mt="10px" fontSize="sm" color="blue.400">
-                                        <p>{polls.answerOne}</p>
-                                        <Progress value={80} />
+                                        <Flex>
+                                            <Box width="70%">
+                                                <p>{polls.answerOne}</p>
+                                                <Progress value={polls.answerOneVal} />
+                                            </Box>
+                                            <Spacer/>
+                                            <Button mt="10px" h="33px">Vote</Button>
+                                        </Flex>
                                     </Box>
                                     <Box mt="10px" fontSize="sm" color="blue.400">
-                                        <p>{polls.answerTwo}</p>
-                                        <Progress value={80} />
+                                        <Flex>
+                                            <Box width="70%">
+                                                <p>{polls.answerTwo}</p>
+                                                <Progress value={polls.answerTwoVal} />
+                                            </Box>
+                                            <Spacer/>
+                                            <Button mt="10px" h="33px">Vote</Button>
+                                        </Flex>
+
                                     </Box>
 
                                     <Box color="green.400" mt="15px" fontSize="10px">

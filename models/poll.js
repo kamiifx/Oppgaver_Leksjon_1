@@ -14,14 +14,21 @@ const PollSchema = Schema({
         type:String,
         required: true,
     },
+    answerOneVal:{
+        type:Number,
+        default:0,
+    },
+    answerTwoVal:{
+        type:Number,
+        default:0,
+    },
     user:{
         type:Schema.Types.ObjectID,
         ref:'users',
-        required:true
+        required:true,
     }
 },{timestamps:true, toJSON:{virtuals:true}, toObject:{virtuals: true}});
 
 
 mongoose.model("polls",PollSchema);
 
-//5faaebde7baa7f452c77f69b

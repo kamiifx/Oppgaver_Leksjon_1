@@ -18,7 +18,7 @@ function App() {
                         <Header/>
                         <Route exact path='/' component={Home}/>
                         <Route exact path='/login' component={LoginForm}/>
-                        <Route exact path='/poll/create/' component={CreatePoll}/>
+                        <Route exact path='/polls/create/' component={CreatePoll}/>
                         <Route exact path='/poll/:id' component={Poll}/>
                         <Route exact path='/signup' component={SignupForm}/>
                     </AuthProvider>
