@@ -6,6 +6,8 @@ Prosjektet er veldig åpent, mongoDb cloud kjører på 0.0.0.0.0 så burde være
 ### Client kjører på localhost:3000
 ### MongoDb link (Kjører på atlas cloud) : "mongodb+srv://web:web123@cluster0.jkj1x.mongodb.net/Leksjon11DB?retryWrites=true&w=majority"
 
+- Port ligger på bunn av server.js
+
 - Oppgave 1 : Ligger i mappen Wireframes
 
 - Oppgave 2 : Alle er på Controllers,Models,Service,Route
