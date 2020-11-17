@@ -26,10 +26,10 @@ function Home(){
         <div>
                 {polls &&
                 polls.map((polls)=>(
-                    <Container mt="50px" maxW="xl" centerContent>
+                    <Container key={polls.id} mt="50px" maxW="xl" centerContent>
                         <SimpleGrid columns={[3]} spacing="40px">
                             <Box boxShadow="base" bg="gray.50" w="350px" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-                                <Box key={polls.id} color="gray.500"
+                                <Box color="gray.500"
                                      fontWeight="semibold"
                                      letterSpacing="wide"
                                      fontSize="xs"

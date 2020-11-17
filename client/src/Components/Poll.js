@@ -1,18 +1,29 @@
 import React,{useEffect,useState} from 'react';
 import {get} from "../utils/pollService";
+import {vote} from "../utils/pollService";
+
 import { useParams } from 'react-router-dom';
-import {Box, Container, Progress} from "@chakra-ui/react";
+import {Box, Container, Progress,Button} from "@chakra-ui/react";
 
 
 function Poll() {
     const [poll, setPoll] = useState(null);
     const { id } = useParams();
+
     useEffect(async () => {
         if (id){
             const { data } = await get(id);
             setPoll(data);
         }
     }, [id]);
+
+    const votePoll = async () => {
+        const {data} = await vote(id)
+        console.log(data,poll)
+
+        setPoll(data)
+        console.log(poll.answerOneVal)
+    }
     return(
         <div>
             <Container mt="50px" maxW="xl" centerContent>
@@ -31,6 +42,7 @@ function Poll() {
                         <Box mt="10px" fontSize="20px" color="blue.400">
                             <p>{poll.answerTwo}</p>
                             <Progress value={poll.answerTwoVal} />
+                            <Button mt="10px" onClick={votePoll}>Vote</Button>
                         </Box>
 
                         <Box color="green.400" mt="15px" fontSize="10px">

@@ -18,11 +18,17 @@ const update = async (id, data) => {
     });
 }
 
+const voteValue = (id) => {
+    console.log(id);
+    return Polls.findByIdAndUpdate(id,{$inc:{answerOneVal:1}},{new:true}).populate('user','email')
+}
+
 
 module.exports = {
     getPollById,
     listPolls,
     createPoll,
     removePoll,
-    update
+    update,
+    voteValue
 }

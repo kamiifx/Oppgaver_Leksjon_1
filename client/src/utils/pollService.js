@@ -26,6 +26,14 @@ export const create = async (data) => {
     }
 };
 
+export const vote = async (id) => {
+    try{
+        return await http.put(`${API_URL}/${id}`)
+    }catch (err){
+        return err.response
+    }
+}
+
 export default {
-    list,get,create
+    list,get,create,vote
 }
