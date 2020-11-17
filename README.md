@@ -24,3 +24,9 @@ Prosjektet er veldig åpent, mongoDb cloud kjører på 0.0.0.0.0 så burde være
 - yarn run dev for å kjøre server og client
 
 - yarn run server for å kjøre server
+
+# Known issues
+- Man må trykke i midten av knappene noen ganger eller flere ganger 
+
+# Slack
+- Problemer ? : Slack : Kamii
