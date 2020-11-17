@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import {useHistory} from 'react-router-dom';
 import {create} from "../utils/pollService";
 import styled from "styled-components";
+import {Container,Box,FormControl,Input,Button,Flex,FormLabel} from "@chakra-ui/react";
 function CreatePoll(){
     const [success, setSuccess] = useState(false);
     const [error,setError] = useState(null);
@@ -19,31 +20,25 @@ function CreatePoll(){
         }
     };
 
-    const Input = styled.input`
-        background-color:#EDF2F7;
-        width:300px;
-        height:50px;
-        border-radius:10px;
-    `;
-    const Button = styled.button`
-        background-color:#9AE6B4;
-        height:50px;
-        width:120px;
-        border-radius:10px;
-    `
-
     return(
-        <div>
-            <form action="" onSubmit={handleSubmit(onSubmit)}>
-                <p>Poll name</p>
-                <Input type="text" id="questionName" placeholder="Poll name" name="questionName" ref={register({required:true,})}/>
-                <p>Poll Option 1</p>
-                <input type="text" id="answerOne" placeholder="Option 1 text" name="answerOne" ref={register({required:true,})}/>
-                <p>Poll Option 2</p>
-                <input type="text" id="answerTwo" placeholder="Option 2 text" name="answerTwo" ref={register({required:true,})}/>
-                <button type="submit">Create</button>
-            </form>
-        </div>
+        <Box as="form" onSubmit={handleSubmit(onSubmit)}>
+            <Container  borderWidth="1px" borderRadius="lg" mt="130px" maxW="330px" h="320px" centerContent>
+                <Box>
+                    <FormControl>
+                        <Flex direction="column">
+                            <FormLabel mt="10px">Poll name</FormLabel>
+                            <Input type="text" id="questionName" placeholder="Poll name" name="questionName" ref={register({required:true,})}/>
+                            <FormLabel mt="10px">Poll Option 1</FormLabel>
+                            <Input type="text" id="answerOne" placeholder="Option 1 text" name="answerOne" ref={register({required:true,})}/>
+                            <FormLabel mt="10px">Poll Option 2</FormLabel>
+                            <Input type="text" id="answerTwo" placeholder="Option 2 text" name="answerTwo" ref={register({required:true,})}/>
+                            <Button mt="10px" type="submit">Create</Button>
+                        </Flex>
+                    </FormControl>
+                </Box>
+            </Container>
+        </Box>
+
     )
 }
 

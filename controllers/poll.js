@@ -52,14 +52,25 @@ const update = catchAsyncErrors(async (req,res,next) => {
     res.status(200).json({success:true, data:poll});
 });
 
-const vote = catchAsyncErrors(async (req,res,next) => {
+const vote1 = catchAsyncErrors(async (req,res,next) => {
     let poll = await pollService.getPollById(req.params.id)
     if (!poll){
         return next(
             new ErrorHandler(`Finner ikke poll med ${req.params.id}`,404)
         );
     }
-    poll = await pollService.voteValue(poll.id);
+    poll = await pollService.voteValue1(poll.id);
+    res.status(200).json(poll)
+});
+
+const vote2 = catchAsyncErrors(async (req,res,next) => {
+    let poll = await pollService.getPollById(req.params.id)
+    if (!poll){
+        return next(
+            new ErrorHandler(`Finner ikke poll med ${req.params.id}`,404)
+        );
+    }
+    poll = await pollService.voteValue2(poll.id);
     res.status(200).json(poll)
 });
 
@@ -69,5 +80,6 @@ module.exports = {
     create,
     remove,
     update,
-    vote
+    vote1,
+    vote2
 }

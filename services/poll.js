@@ -18,9 +18,14 @@ const update = async (id, data) => {
     });
 }
 
-const voteValue = (id) => {
+const voteValue1 = (id) => {
     console.log(id);
     return Polls.findByIdAndUpdate(id,{$inc:{answerOneVal:1}},{new:true}).populate('user','email')
+}
+
+const voteValue2 = (id) => {
+    console.log(id);
+    return Polls.findByIdAndUpdate(id,{$inc:{answerTwoVal:1}},{new:true}).populate('user','email')
 }
 
 
@@ -30,5 +35,7 @@ module.exports = {
     createPoll,
     removePoll,
     update,
-    voteValue
+    voteValue1,
+    voteValue2
+
 }
