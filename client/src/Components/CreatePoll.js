@@ -26,11 +26,11 @@ function CreatePoll(){
                 <Box>
                     <FormControl>
                         <Flex direction="column">
-                            <FormLabel mt="10px">Poll name</FormLabel>
+                            <FormLabel mt="10px">Poll Question</FormLabel>
                             <Input type="text" id="questionName" placeholder="Poll name" name="questionName" ref={register({required:true,})}/>
-                            <FormLabel mt="10px">Poll Option 1</FormLabel>
+                            <FormLabel mt="10px">Poll Answer 1</FormLabel>
                             <Input type="text" id="answerOne" placeholder="Option 1 text" name="answerOne" ref={register({required:true,})}/>
-                            <FormLabel mt="10px">Poll Option 2</FormLabel>
+                            <FormLabel mt="10px">Poll Answer 2</FormLabel>
                             <Input type="text" id="answerTwo" placeholder="Option 2 text" name="answerTwo" ref={register({required:true,})}/>
                             <Button mt="10px" type="submit">Create</Button>
                         </Flex>

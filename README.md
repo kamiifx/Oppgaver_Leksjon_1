@@ -1,10 +1,11 @@
 # WebApplikasjoner
 
-Prosjektet er veldig åpent, mongoDb cloud kjører på 0.0.0.0.0 så burde være mulig å connecte fra hvor som helst.
+Prosjektet er veldig åpent, mongoDb cloud blir brukt og kjører på 0.0.0.0.0 så burde være mulig å connecte fra hvor som helst så
+vil anta det er bare å kjøre programmet.
 
 ### Server kjører på localhost:5000
 ### Client kjører på localhost:3000
-### MongoDb link (Kjører på atlas cloud) : "mongodb+srv://web:web123@cluster0.jkj1x.mongodb.net/Leksjon11DB?retryWrites=true&w=majority"
+### MongoDb link vis man vil sjekke (Kjører på atlas cloud) : "mongodb+srv://web:web123@cluster0.jkj1x.mongodb.net/Leksjon11DB?retryWrites=true&w=majority"
 
 - Man må logge inn for å kunne svare på polls (Bare skrive dummy email på signup eller bruke denne brukern : heisann@gmail.com)
 Samme for å lage en poll selvfølgelig
@@ -22,7 +23,7 @@ Samme for å lage en poll selvfølgelig
 - Oppgave 4 : Server : NyPoll er på /routes/poll client : client/Components/CreatePoll.js
 - Oppgave 4 : Axios Call : client/utils authService.js og pollService.js
 - Oppgave 4 : useEffect : på components i client : CreatePoll.js,Home.js,LoginForm.js,SignUpForm.js,Poll.js
-
+- Mangler testing og styled comp
 
 # Installasjon og Kjøring
 - yarn install på client og root folderen
